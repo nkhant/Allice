@@ -4,13 +4,16 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>15c86f4d-4473-4622-9eb2-6291a77ac93f</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>Allice.py</StartupFile>
+    <StartupFile>allice_speech_database.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
     <OutputPath>.</OutputPath>
     <Name>Allice</Name>
     <RootNamespace>Allice</RootNamespace>
+    <LaunchProvider>Standard Python launcher</LaunchProvider>
+    <EnableNativeCodeDebugging>False</EnableNativeCodeDebugging>
+    <IsWindowsApplication>False</IsWindowsApplication>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DebugSymbols>true</DebugSymbols>
@@ -22,6 +25,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Allice.py" />
+    <Compile Include="allice_speech_database.py" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in

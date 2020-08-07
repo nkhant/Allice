@@ -360,3 +360,6 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+
+#Database SQLITE
+Allice/2015-01.db
