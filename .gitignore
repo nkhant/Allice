@@ -363,3 +363,9 @@ FodyWeavers.xsd
 
 #Database SQLITE
 Allice/2015-01.db
+
+nmt-chatbot
+test.from
+test.to
+train.from
+train.to
