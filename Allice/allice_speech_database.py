@@ -30,6 +30,7 @@ def find_existing_score(pid):
         #print("find_parent", e)
         return False
 
+# Types of comments we are looking for
 def acceptable(data):
     if len(data.split(' ')) > 50 or len(data) < 1:
         return False
@@ -40,6 +41,7 @@ def acceptable(data):
     else:
         return True
 
+# Checks if comment is og or a reply
 def find_parent(pid):
     try:
         sql = "SELECT comment FROM parent_reply WHERE comment_id = '{}' LIMIT 1".format(pid)
