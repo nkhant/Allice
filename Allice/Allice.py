@@ -1,5 +1,5 @@
-#from chatterbot import ChatBot
-#from chatterbot.trainers import ChatterBotCorpusTrain
+from chatterbot import ChatBot
+from chatterbot.trainers import ChatterBotCorpusTrain
 
 import discord 
 from discord.ext import commands
