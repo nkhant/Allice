@@ -34,24 +34,27 @@ async def ping(ctx):
 # Dont forget need to have checks so it doesnt reply to itself
 @bot.event
 async def on_message(message):
-    if message.content.startswith("ping"):
-        await message.channel.send("Pong")
+    if message.author != bot.user:
+        await message.channel.send(checkDatabase(message.content))
 
     await bot.process_commands(message)
+
+def checkDatabase(userMessage):
+    return chatbot.get_reponse(userMessage)
 
 # Removed on upload. Can replace with own user's input
 bot.run('TOKEN')
 
 ## Chat Bot Library - will uncomment later--------------------------
-#alliceChatBot = ChatBot("Allice")
+alliceChatBot = ChatBot("Allice")
 
 ## Create a new trainer for the chatbot
-#trainer = ChatterBotCorpusTrainer(chatbot)
+trainer = ChatterBotCorpusTrainer(chatbot)
 
 ## Train the chatbot based on the english corpus
-#trainer.train("chatterbot.corpus.english")
+trainer.train("chatterbot.corpus.english")
 
 ## Get a response to an input statement
-#chatbot.get_response("Hello, how are you today?")
+chatbot.get_response("Hello, how are you today?")
 
 ##if __name__ == '__main__':
