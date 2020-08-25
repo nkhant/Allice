@@ -5,11 +5,22 @@ import discord
 from discord.ext import commands
 from discord.ext.commands import Bot
 
+## Chat Bot Library - will uncomment later--------------------------
+alliceChatBot = ChatBot("Allice")
+
+## Create a new trainer for the chatbot
+trainer = ChatterBotCorpusTrainer(chatbot)
+
+## Train the chatbot based on the english corpus
+trainer.train("chatterbot.corpus.english")
+
+## Get a response to an input statement
+chatbot.get_response("Hello, how are you today?")
+
+
 # This denotes when Allice will understand the person using a command of hers
 # Example You: >help
 bot = commands.Bot(command_prefix='>')
-
-
 
 # Give bot ability to read people's messages
 # Make it reply like a normal person
@@ -23,6 +34,9 @@ bot = commands.Bot(command_prefix='>')
 #        return ''
 #    else:
 #        return'$'
+
+def checkDatabase(userMessage):
+    return chatbot.get_reponse(userMessage)
 
 # All commands start with bot.command(). bot.client() for client related things
 # ctx = context
@@ -39,22 +53,9 @@ async def on_message(message):
 
     await bot.process_commands(message)
 
-def checkDatabase(userMessage):
-    return chatbot.get_reponse(userMessage)
 
 # Removed on upload. Can replace with own user's input
 bot.run('TOKEN')
 
-## Chat Bot Library - will uncomment later--------------------------
-alliceChatBot = ChatBot("Allice")
-
-## Create a new trainer for the chatbot
-trainer = ChatterBotCorpusTrainer(chatbot)
-
-## Train the chatbot based on the english corpus
-trainer.train("chatterbot.corpus.english")
-
-## Get a response to an input statement
-chatbot.get_response("Hello, how are you today?")
 
 ##if __name__ == '__main__':
