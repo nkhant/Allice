@@ -1,5 +1,6 @@
 from chatterbot import ChatBot
-from chatterbot.trainers import ChatterBotCorpusTrain
+from chatterbot import trainers
+from chatterbot.trainers import ChatterBotCorpusTrainer
 
 import discord 
 from discord.ext import commands
@@ -15,7 +16,7 @@ trainer = ChatterBotCorpusTrainer(chatbot)
 trainer.train("chatterbot.corpus.english")
 
 ## Get a response to an input statement
-chatbot.get_response("Hello, how are you today?")
+# chatbot.get_response("Hello, how are you today?")
 
 
 # This denotes when Allice will understand the person using a command of hers
@@ -55,7 +56,7 @@ async def on_message(message):
 
 
 # Removed on upload. Can replace with own user's input
-bot.run('TOKEN')
+bot.run('TOken')
 
 
 ##if __name__ == '__main__':
