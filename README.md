@@ -1,3 +1,7 @@
 ### Allice
 
-Chatbot in python
+Chatbot in python for Discord
+
+# Libraries Used
+Chatterbot
+Discord.py
