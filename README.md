@@ -2,6 +2,7 @@
 
 Chatbot in python for Discord
 
-# Libraries Used
+### Libraries Used
 Chatterbot
 Discord.py
+SQLite
