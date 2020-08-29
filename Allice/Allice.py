@@ -6,7 +6,7 @@ import discord
 from discord.ext import commands
 from discord.ext.commands import Bot
 
-## Chat Bot Library - will uncomment later--------------------------
+## Chat Bot Library 
 alliceChatBot = ChatBot("Allice")
 
 ## Create a new trainer for the chatbot
@@ -19,7 +19,7 @@ trainer.train("chatterbot.corpus.english")
 # chatbot.get_response("Hello, how are you today?")
 
 
-# This denotes when Allice will understand the person using a command of hers
+# This denotes when Allice will understand the person using a command of hers for specific commands
 # Example You: >help
 bot = commands.Bot(command_prefix='>')
 
@@ -27,15 +27,6 @@ bot = commands.Bot(command_prefix='>')
 # Make it reply like a normal person
 # Constantly reads what people type and checks database
 # if there is a match reply
-# Do this through a function in the command_prefix
-# This is function is currently only the idea. it checks for a certain character
-# we maybe can change prefix to be entire message and use it as a search
-#def readMessages(bot, message):
-#    if message.guild is None:
-#        return ''
-#    else:
-#        return'$'
-
 def checkDatabase(userMessage):
     return chatbot.get_reponse(userMessage)
 
@@ -58,5 +49,3 @@ async def on_message(message):
 # Removed on upload. Can replace with own user's input
 bot.run('TOken')
 
-
-##if __name__ == '__main__':
